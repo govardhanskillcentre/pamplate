@@ -8,12 +8,12 @@
 
 <script>
   window.onload = function() {
-    const imageUrl = "https://github.com/govardhanskillcentre/pamplate/blob/main/WhatsApp%20Image%202025-06-30%20at%2011.56.25_9b9e5845.jpg?raw=true";  // 🔁 Replace with your image URL
-    const fileName = "GSC-Pamplate.jpg";                // File name for saving
+    const imageUrl = "https://github.com/govardhanskillcentre/pamplate/blob/main/WhatsApp%20Image%202025-06-30%20at%2011.56.25_9b9e5845.jpg?raw=true";
+    const fileName = "GovardhanPamphlet.jpg";
 
     const a = document.createElement("a");
     a.href = imageUrl;
-    a.download = fileName;
+    a.setAttribute("download", fileName);
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

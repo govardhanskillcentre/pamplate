@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Image Download</title>
+</head>
+<body>
+
+<script>
+  window.onload = function() {
+    const imageUrl = "https://govardhanskillcentre.wordpress.com/wp-content/uploads/2025/06/whatsapp-image-2025-06-30-at-11.56.25_9b9e5845.jpg";  // 🔁 Replace with your image URL
+    const fileName = "GSC-Pamplate.jpg";                // File name for saving
+
+    const a = document.createElement("a");
+    a.href = imageUrl;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  };
+</script>
+
+</body>
+</html>

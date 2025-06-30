@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Download Pamphlet</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    .hidden-button {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📥 Your Download Will Start...</h2>
+  <p>If it doesn't, <a id="manualLink" href="#">click here</a>.</p>
+
+  <!-- Hidden anchor element used to trigger download -->
+  <a id="downloadLink" class="hidden-button"
+     href="https://github.com/govardhanskillcentre/pamplate/blob/main/WhatsApp%20Image%202025-06-30%20at%2011.56.25_9b9e5845.jpg?raw=true"
+     download="GovardhanPamphlet.jpg">
+     Download
+  </a>
+
+  <script>
+    window.onload = function() {
+      // Delay gives browser time to render before triggering download
+      setTimeout(() => {
+        const downloadLink = document.getElementById("downloadLink");
+        downloadLink.click(); // Try to auto-start download
+      }, 1000);
+
+      // Also allow manual click
+      document.getElementById("manualLink").onclick = function(e) {
+        e.preventDefault();
+        document.getElementById("downloadLink").click();
+      };
+    };
+  </script>
+
+</body>
+</html>
